@@ -84,8 +84,7 @@ extern u8                           g_uCurSizeset; // 0 or 1
 
 // --- MISC -----------------------------------------------------------------
 //
-extern volatile u16                 myJIFFY;
-extern u8                           g_myVDPRegs[];
+extern u8                           g_myVDPRegs[]; // Could use the org ones in this project, but old code used this array...
 
 // --------------------------------------------------------------------------
 // SLOTS AND MEMORY
@@ -98,8 +97,8 @@ extern u8                           g_uSlotidPage2RAM;
 // --------------------------------------------------------------------------
 // STATIC VARS
 //
-const u8 auLOGICAL_MODES[] = {VDPCMD_HMMM,VDPCMD_LMMM};
-const u8 auLOGICAL_OPS[]   = {LOGICAL_OP_IMP, LOGICAL_OP_AND, LOGICAL_OP_OR, LOGICAL_OP_EOR, LOGICAL_OP_TIMP, LOGICAL_OP_TAND, LOGICAL_OP_TOR, LOGICAL_OP_TEOR};
+const u8 auLOGICAL_MODES[]              = {VDPCMD_HMMM,VDPCMD_LMMM};
+const u8 auLOGICAL_OPS[]                = {LOGICAL_OP_IMP, LOGICAL_OP_AND, LOGICAL_OP_OR, LOGICAL_OP_EOR, LOGICAL_OP_TIMP, LOGICAL_OP_TAND, LOGICAL_OP_TOR, LOGICAL_OP_TEOR};
 
 const u8 auSCREENS[]                    = {5,8}; // only two screens supported now, check "checkInput()" to expand
 const u8 auPIXELS_PR_BYTE[]             = {2,1}; // must match screens
@@ -114,7 +113,7 @@ const u32 auPAGE1_NAME_TABLE_ADDRESS[]  = {0x8000,0x10000}; // must match screen
 #define SHAPE_BOX_ODD_DEST          0,   0,   1,   1,   0,   0,  32,   0,  32,   0
 #define SHAPE_BOX_DOWN              0,   0,   1, 126, 126,   0,  32,   0,  32,   0
 
-// Double the size OR MORE for fast "mode"
+// "Double the size" OR MORE for a fast "mode"
 // The BOX size is not exact double of the above square, a few pixels less (24)
 // #define SHAPE_LANDSCAPE_X2          0,   0,   1,   0,   0,   0, 254,   0, 48,   0
 #define SHAPE_LANDSCAPE_X2          0,   0,   1,   0,   0,   0, 128,   0,  16,   0
