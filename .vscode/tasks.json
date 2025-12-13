@@ -1,0 +1,120 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Startup - Debug",
+			"type": "shell",
+			"command": "./scripts/make.bat",
+			"args": [
+				"Debug"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/project/"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Build All - Debug",
+			"type": "shell",
+			"command": "scripts/make_all.bat",
+			"args": [
+				"Debug"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/project/"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Make defines",
+			"type": "shell",
+			"command": "./scripts/make_defines.bat",
+			"args": [
+				"Debug"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/project/"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Make segments",
+			"type": "shell",
+			"command": "./scripts/make_segments.bat",
+			"args": [
+				"Debug"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/project/"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Make mainrom",
+			"type": "shell",
+			"command": "./scripts/make_mainrom.bat",
+			"args": [
+				"Debug"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/project/"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "new",
+				"focus": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Show summary",
+			"type": "shell",
+			"command": "./scripts/make_summary.bat",
+			"args": [
+				"Debug"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/project/"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "new",
+				"focus": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Execute",
+			"type": "shell",
+			"command": "./scripts/run.bat",
+			"options": {
+				"cwd": "${workspaceFolder}/project/"
+			},
+			"problemMatcher": []
+		}
+	]
+}

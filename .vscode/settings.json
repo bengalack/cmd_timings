@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "*.s": "z80-macroasm",
+        "defines.h": "c",
+        "structures.h": "c",
+        "level4_segment.h": "c",
+        "resident_inl.h": "c",
+        "data1_segment.h": "c",
+        "resident.h": "c",
+        "string.h": "c",
+        "defines-pages.h": "c"
+    }
+}

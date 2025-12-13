@@ -1,0 +1,2 @@
+@REM TRY CD first, to make it work both from IDE and scripts
+pypy .\scripts\buildrom.py 0x4000 0xC000 project crt0_msx_rom_4000_ascii16.s non-const_variables.c allsorts_slots.s allsorts_vdp.s startup.c

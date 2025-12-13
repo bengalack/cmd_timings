@@ -1,0 +1,40 @@
+*.cache
+project/Debug/objs/*.asm
+project/Debug/objs/*.rom
+*.ihx
+*.pyc
+__pycache__/**
+project/src/include_gen/**
+
+glass.jar
+
+# Prerequisites
+
+# Object files
+*.rel
+
+# Linker output
+*.ilk
+*.map
+*.exp
+*.lst
+*.noi
+*.lk
+*.sym
+*.adb
+*.cdb
+
+# Precompiled Headers
+
+# Libraries
+
+# Generated files
+*.seg
+
+# Shared objects (inc. Windows DLLs)
+
+# Executables
+
+# Debug files
+
+# Kernel Module Compile Results
