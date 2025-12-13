@@ -71,7 +71,7 @@ The screen above shows:
 __DO NOT SWAP BETWEEN SCREEN MODES WHEN LMMM AND CPU-PUSH IS ENABLED, THE SCREEN FREEZES. I'LL FIX SOON...__
 
 ### Hidden functionality
-Clearly, the command engine's capacity is mainly bound by bytes and not pixels, so the amount of pixels are ~doubled in the case of HMMM (fast copy) and screen 5.
+Clearly, the command engine's capacity is mainly bound by bytes and not pixels, so the amount of pixels are ~doubled in the case of HMMM (fast copy) and screen 5, to be comparable with theotjrr modes..
 
 ### Questions I had...
 * Does CPU->VRAM push during command operation affect the command execution time(as described in Wouter's paper)? YES
