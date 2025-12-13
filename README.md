@@ -22,7 +22,7 @@ Key takeaway in the image above: __THE SIZE OF THE WHITE BAR__ (and toggle setti
 
 The screen above shows:
 * NTSC/60Hz, screen 5, 256x212, page 0, _Sprites_ ON (but none visible)
-* Emulated in openMSX 21.0-89 Sony_HB-F1XDJ. Real footage is from a Panasonic FS-A1.
+* Emulated in openMSX 21.0-89 Sony_HB-F1XDJ. Real footage is from a Panasonic FS-A1
 * A simple grid so we can do simple visual comparisons with real hardware
 * CPU is idle from VBLANK until line 0, after that:
 * Command engine kicks off a BLOCK COPY from PAGE 1 (at 0,0 in this example)
@@ -31,11 +31,11 @@ The screen above shows:
   * The _shape_ of the copy is "portrait"
   * The _copy mode_ is "Logical" (LMMM - slow) and the _logical operation_ is IMP
   * The border is set to __WHITE__ at this point
-* The CPU starts _pushing_ 2048 unrolled OUTIs to VRAM at line 128 and onwards (18 * 2048 = cycles). Data is just random data.
+* The CPU starts _pushing_ 2048 unrolled OUTIs to VRAM at line 128 and onwards (18 * 2048 = cycles). Data is just random data
   * Marked with yellow outline in the image
   * The border is set to __RED__ at this point
-* Once CPU is done the border will show __WHITE__ again until the BLOCK COPY is finished.
-  * Border is __BLACK__ when CPU is idle again.
+* Once CPU is done the border will show __WHITE__ again until the BLOCK COPY is finished
+  * Border is __BLACK__ when CPU is idle again
 * BIOS is not used during operation (only change of screen mode), and the interrupt code at 0x0038 is minimal
 * All this is repeated for every frame
 
@@ -79,10 +79,10 @@ Clearly, the command engine's capacity is mainly bound by bytes and not pixels, 
 * Does sprites ON/OFF affect the execution time (as described in Wouter's paper)? YES
 * Does the kind of logical operation used (in "slow" mode) affect the execution time? NO
 * Does the splitting nibbles across bytes from src to dest in logical copy affect the execution time? NO
-* Does the clopy block crossing the 0x4000 boundary affect the execution time? NO
+* Does the copy block crossing the 0x4000 boundary affect the execution time? NO
 * Does the placement of the destination image affect the execution time? NO
-* Does screen mode affect the execution time? YES if you look at pixel amount, NO if you look at byte amount
-* Are these timings perfectly emulated in emulators? NO (openMSX seems to be correct in HMMM, but not at LMMM)
+* Does screen mode affect the execution time? Affected by pixels per byte, but I need to test more (maybe add another mode)
+* Are these timings perfectly emulated in emulators? NO (webMSX is too fast. And openMSX is also too fast, albeit better/closer) 
 
 ## Requirements for building
 
