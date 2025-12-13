@@ -13,10 +13,14 @@ You need to know how the [CRT raster beam](https://en.wikipedia.org/wiki/Raster_
 
 ## How it looks and works
 
-<img width="50%" src="project/img/cmd_cpu.png" />
+<img width="40%" src="project/img/cmd_cpu.png" /> 
+ <img width="50%" src="project/img/Panasonic_FS-A1-SCR5_CMD_CPU.JPEG" />
+
+Key takeaway in the image above: __THE SIZE OF THE WHITE BAR__.
 
 The screen above shows:
-* NTSC/60Hz, screen 5, page 0, _Sprites_ ON (but none visible)
+* NTSC/60Hz, screen 5, 256x212, page 0, _Sprites_ ON (but none visible)
+* Emulated in openMSX 21.0-89 Sony_HB-F1XDJ. Real footage is from a Panasonic FS-A1.
 * A simple grid so we can do simple visual comparisons with real hardware
 * CPU is idle from VBLANK until line 0, after that:
 * Command engine kicks off a BLOCK COPY from PAGE 1 (at 0,0 in this example)
@@ -30,6 +34,7 @@ The screen above shows:
   * The border is set to __RED__ at this point
 * Once CPU is done the border will show __WHITE__ again until the BLOCK COPY is finished.
   * Border is __BLACK__ when CPU is idle again.
+* BIOS is not used during operation (only change of screen mode), and the interrupt code at 0x0038 is minimal
 * All this is repeated for every frame
 
 ### Key mappings during execution
@@ -59,6 +64,9 @@ The screen above shows:
 |             | D          | Screen 8      |
 
 * The keyboard mapping is not working for _numbers_ on Russian keyboards as I do not use BIOS for this, but the ports directly.
+
+## KNOWN BUG
+__DO NOT SWAP BETWEEN SCREEN MODES WHEN LMMM AND CPU-PUSH IS ENABLED, THE SCREEN FREEZES. I'LL FIX SOON...__
 
 ### Hidden functionality
 Clearly, the command engine's capacity is mainly bound by bytes and not pixels, so the amount of pixels are ~doubled in the case of HMMM (fast copy) and screen 5.

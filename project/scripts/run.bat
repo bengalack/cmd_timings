@@ -2,11 +2,11 @@
 
 @REM C:\tools\openmsx21\openmsx.exe -machine Panasonic_FS-A1GT -script .\openMSX_emul_start_config.tcl
 @REM C:\tools\openmsx21x\openmsx.exe -machine Philips_NMS_8255 -script .\openMSX_emul_start_config.tcl
-C:\tools\openmsx21x\openmsx.exe -machine Sony_HB-F1XDJ -script .\openMSX_emul_start_config.tcl
+@REM C:\tools\openmsx21x\openmsx.exe -machine Sony_HB-F1XDJ -script .\openMSX_emul_start_config.tcl
+C:\tools\openmsx21x\openmsx.exe -machine Panasonic_FS-A1 -script .\openMSX_emul_start_config.tcl
 
 @REM C:\tools\openmsx21x\openmsx.exe -machine Sanyo_phc-70FD2 -script .\openMSX_emul_start_config.tcl
 @REM C:\tools\openmsx21x\openmsx.exe -machine Panasonic_FS-A1GT -script .\openMSX_emul_start_config.tcl
-@REM C:\tools\openmsx21x\openmsx.exe -machine Panasonic_FS-A1 -script .\openMSX_emul_start_config.tcl
 @REM C:\tools\openmsx21x\openmsx.exe -machine Panasonic_FS-A1FM -script .\openMSX_emul_start_config.tcl
 @REM C:\tools\openmsx21x\openmsx.exe -machine Panasonic_FS-A1WSX -script .\openMSX_emul_start_config.tcl
 @REM C:\tools\openmsx21x\openmsx.exe -machine Sanyo_PHC-70FD -script .\openMSX_emul_start_config.tcl
