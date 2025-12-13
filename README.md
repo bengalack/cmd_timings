@@ -14,8 +14,8 @@ You need to know how the [CRT raster beam](https://en.wikipedia.org/wiki/Raster_
 ## How it looks and works
 
 <div>
-<img width="36%" src="project/img/cmd_cpu.png" /> 
-<img width="44%" src="project/img/Panasonic_FS-A1-SCR5_CMD_CPU.JPEG" />
+<img width="40%" src="project/img/cmd_cpu.png" /> 
+<img width="50%" src="project/img/Panasonic_FS-A1-SCR5_CMD_CPU.JPEG" />
 </div>
 
 Key takeaway in the image above: __THE SIZE OF THE WHITE BAR__.
