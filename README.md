@@ -86,7 +86,7 @@ Clearly, the command engine's capacity is mainly bound by bytes and not pixels, 
 
 ## Requirements for building
 
-Written in asm but also a lot of C for simplicity.
+Written mostly in C for simplicity (+asm)
 
 * SDCC (I use v4.5)
 * python (I use 3.11)
