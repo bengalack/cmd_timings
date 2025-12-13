@@ -9,7 +9,7 @@ You need to know how the [CRT raster beam](https://en.wikipedia.org/wiki/Raster_
 ### Product
 * A 16 kB ROM file for MSX2 VDPs and above
 * ASCII-16 mapper
-* ROM file can be found here: `project/Debug/bin/cmd_cpu.rom`
+* ROM file can be found here: [project/Debug/bin/cmd_cpu.rom](project/Debug/bin/cmd_cpu.rom)
 
 ## How it looks and works
 
