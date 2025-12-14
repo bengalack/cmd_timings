@@ -13,7 +13,7 @@ __The product is:__
 
 __Who is this for?__
 * MSX devs who wants to get the most out of the VDP
-* Emulator devs
+* Emulator devs ([#2057 opened in openMSX](https://github.com/openMSX/openMSX/issues/2057))
 
 ## How it looks and works
 
