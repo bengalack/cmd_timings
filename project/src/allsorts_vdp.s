@@ -64,6 +64,15 @@ _vdpSetLineIntEnabledNI::
 	ld 		l, #0x00
 	jp 		_vdp_regWriteNI_asm ; JUMP to this directly, vdpreg in l, data in a (MODIFIES: A)
 
+;-----------------------------------------------
+;extern void vdpSetLineIntDisabledNI();
+_vdpSetLineIntDisabledNI::
+	ld		a, ( _g_myVDPRegs+0 )
+	and		#~0b00010000
+	ld		( _g_myVDPRegs+0 ), a
+	ld 		l, #0x00
+	jp 		_vdp_regWriteNI_asm ; JUMP to this directly, vdpreg in l, data in a (MODIFIES: A)
+
 ;------------------------------------------------------------------------------
 ; void vdp_setBorderColor( unsigned char color )
 ;

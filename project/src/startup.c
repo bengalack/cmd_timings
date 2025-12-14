@@ -58,6 +58,7 @@ extern void     vdp_enableScreenNI(void);
 extern void     vdpSetSpritesDisabledNI(void);
 extern void     vdpSetSpritesEnabledNI(void);
 extern void     vdpSetLineIntEnabledNI();
+extern void     vdpSetLineIntDisabledNI();
 extern void     setVdpWriteAddrNI(u8 uHighBit, u16 VRAMAddr) __preserves_regs(b,c,h,l,iyl,iyh); // pump into port VDPIO/0x98 after this
 extern void     vdpWriteDataNI(u8 u) __preserves_regs(b,c,d,e,h,l,iyl,iyh);
 
@@ -337,7 +338,7 @@ __endasm;
 
 // ;------------------------------------------------------------------------------
 // ; Uses BIOS
-// ; Enter in DI, but system sets DI inside as well
+// ; Enter in DI, but system sets DI inside as well (after setting EI/DI several times)
 //
 #pragma disable_warning 85	// because the var is not used in C context
 void setScreenModeDI(u8 mode) __naked
@@ -406,6 +407,18 @@ void set192Lines(bool b192)
 void setupVDPNI(void)
 {
     vdp_regWriteNI(VDPCMD_ABORT, 44);
+
+    vdpSetLineIntDisabledNI(); // important (when called multiple times), as the bios functions gets confused with sudden/extra interrupts
+
+    // do we have lots of interrupts waiting? get rid of them while in current page 0 "mode"
+    // Maybe a better way to do this, but don't care to optimize this now.
+    // The issue is that if not done here, the change mode below does many EI/DIs
+    // and many interrupts pile up, and PC never returns from these interrupts for some reason.
+    // Next time: Make my own changescreen-routine!
+    enableInterrupt();
+    for(u8 i=0; i < 10; i++)
+        halt();
+    disableInterrupt();
 
     memAPI_enaSltPg0_NI_fromC(g_uSlotidPage0BIOS);
     setScreenModeDI(auSCREENS[g_uScreenMode]);
