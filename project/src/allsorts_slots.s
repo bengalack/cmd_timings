@@ -1,3 +1,5 @@
+; Author: pal.hansen@gmail.com
+
 	.allow_undocumented
 	.module startup
 
