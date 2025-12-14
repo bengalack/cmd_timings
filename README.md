@@ -65,7 +65,7 @@ The screen above shows (more images [exist](project/img)):
 * The keyboard mapping is not working for _numbers_ on Russian keyboards as I do not use BIOS for this, but the ports directly.
 
 ### Hidden functionality
-Clearly, the command engine's capacity is mainly bound by bytes and not pixels, so the amount of pixels are ~doubled in the case of HMMM (fast copy) and screen 5.
+Clearly, the command engine's capacity is mainly bound by bytes and not pixels, so the amount of pixels are ~doubled in the case of HMMM (fast copy) and screen 5, to be comparable with the other modes..
 
 ## Questions and answers
 
