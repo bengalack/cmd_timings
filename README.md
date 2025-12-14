@@ -1,6 +1,6 @@
 # MSX CMD Timings
 
-This utility shows, in a _rough manner_, a _slowdown effect on the command engine operations_ found in Yamaha V9938 VDPs (and successors) when the CPU are writing to VRAM at the same time as the command is executing.
+This utility shows, in a _rough manner_, a _slowdown effect on the command engine operations_ found in Yamaha V9938 VDPs (and successors) when the CPU is writing to VRAM at the same time as the command is executing.
 
 I wrote this utility to see which parameters that affect the result. This research stems from a discussion in a [thread](https://www.msx.org/forum/msx-talk/development/triple-buffer-vs-line-split-doubt?page=2) on [MRC](https://msx.org) and the great [VDP timings paper](https://map.grauw.nl/articles/vdp-vram-timing/vdp-timing.html) by Wouter Vermaelen. Maybe one day we can have a rough formula to calculate the gain/loss when using paralellized VDP and CPU -> VDP work? As a next step to the [numbers by Grauw](https://map.grauw.nl/articles/vdp_commands_speed.php#speedtests) in his article.
 
@@ -96,7 +96,7 @@ Written mostly in C for simplicity (+asm)
 
 ### Requirements
 * SDCC (I use v4.5)
-* python (I use 3.11)
+* python (I use v3.11)
 * Glass assembler (is assumed to be found in the root dir)
 
 ### Notes
